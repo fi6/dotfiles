@@ -7,11 +7,13 @@
 - create: 
     - ~/.oh-my-zsh/custom/
     - ~/.oh-my-zsh/custom/plugins
+    - ~/.oh-my-zsh/custom/themes
 - create:
     ~/.ssh:
       mode: 0700
 
 - shell:
+    - [git submodule update --init --recursive, Installing submodules]
     - [sh pre-install.sh, Running pre installation script]
 
 - link:
