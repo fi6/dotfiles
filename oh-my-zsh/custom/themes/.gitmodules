@@ -1,0 +1,2 @@
+[submodule "powerlevel10k"]
+	shallow = true
