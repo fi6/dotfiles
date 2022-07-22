@@ -13,7 +13,7 @@
       mode: 0700
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive --depth=1, Installing submodules]
     - [sh pre-install.sh, Running pre installation script]
 
 - link:
