@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Check if curl is installed
+which curl &> /dev/null || sudo apt install curl
+
 # Check if oh-my-zsh is installed
 OMZDIR="$HOME/.oh-my-zsh"
 if [ ! -d "$OMZDIR" ]; then
