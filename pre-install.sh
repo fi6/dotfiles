@@ -2,8 +2,8 @@
 
 # Check if curl is installed
 if [ -f "`which apt`" ]; then
-  which zsh &> /dev/null || sudo apt install zsh -y
-  which curl &> /dev/null || sudo apt install curl -y
+  sudo /bin/usr/apt install zsh -y
+  sudo apt install curl -y
 fi
 
 # Check if oh-my-zsh is installed
