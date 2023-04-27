@@ -2,6 +2,7 @@
 
 # Check if curl is installed
 if [ -f "`which apt`" ]; then
+    which zsh &> /dev/null || sudo apt install zsh -y
     which curl &> /dev/null || sudo apt install curl -y
 fi
 
