@@ -2,8 +2,8 @@
 
 # Check if curl is installed
 if [ -f "`which apt`" ]; then
-    which zsh &> /dev/null || sudo apt install zsh -y
-    which curl &> /dev/null || sudo apt install curl -y
+  which zsh &> /dev/null || sudo apt install zsh -y
+  which curl &> /dev/null || sudo apt install curl -y
 fi
 
 # Check if oh-my-zsh is installed
@@ -13,7 +13,7 @@ if [ ! -d "$OMZDIR" ]; then
   /bin/sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
   echo 'Updating oh-my-zsh'
-  upgrade_oh_my_zsh
+  zsh -c "source $ZSH/oh-my-zsh.sh && omz update"
 fi
 
 # Change default shell
