@@ -2,7 +2,7 @@
 
 # Check if curl is installed
 if [ -f "`which apt`" ]; then
-  sudo /bin/usr/apt install zsh -y
+  sudo /usr/bin/apt install zsh -y
   sudo apt install curl -y
 fi
 
