@@ -2,11 +2,11 @@
 
 # Check if curl is installed
 if [ -f "`which apt`" ]; then
-  sudo /usr/bin/apt install zsh -y
+  sudo apt install zsh -y
   sudo apt install curl -y
 fi
 
-# Check if oh-my-zsh is installed
+Check if oh-my-zsh is installed
 OMZDIR="$HOME/.oh-my-zsh"
 if [ ! -d "$OMZDIR" ]; then
   echo 'Installing oh-my-zsh'
