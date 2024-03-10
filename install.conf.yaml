@@ -7,8 +7,8 @@
 
 - create:
     - ~/.oh-my-zsh/custom/
-    - ~/.oh-my-zsh/custom/plugins
-    - ~/.oh-my-zsh/custom/themes
+    - ~/.oh-my-zsh/custom/plugins/
+    - ~/.oh-my-zsh/custom/themes/
 - create:
     ~/.ssh:
       mode: 0700

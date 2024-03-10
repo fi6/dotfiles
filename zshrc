@@ -118,3 +118,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+xsource() {
+    if (( ${#argv} < 1 )) ; then
+        printf 'usage: xsource FILE(s)...\n' >&2
+        return 1
+    fi
+
+    while (( ${#argv} > 0 )) ; do
+        [[ -r "$1" ]] && source "$1"
+        shift
+    done
+    return 0
+}
+
+xsource "${HOME}/.zshrc.local"
