@@ -6,22 +6,26 @@
     ['~/.oh-my-zsh/', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
 - create:
-    - ~/.oh-my-zsh/custom/
-    - ~/.oh-my-zsh/custom/plugins/
-    - ~/.oh-my-zsh/custom/themes/
-- create:
     ~/.ssh:
       mode: 0700
 
 - shell:
     - [git submodule update --init --recursive --depth=1, Installing submodules]
     - [sh pre-install.sh, Running pre installation script]
-    # - [mv ~/.zshrc ~/.zshrc.bak, Backing up zshrc]
+    - [mv ~/.zshrc ~/.zshrc.bak, Backing up zshrc]
+    - [mv ~/.p10k.zsh ~/.p10k.zsh.bak, Backing up p10k.zsh]
+
+- create:
+    - ~/.oh-my-zsh/custom/
+    - ~/.oh-my-zsh/custom/plugins/
+    - ~/.oh-my-zsh/custom/themes/
 
 - link:
     ~/.dotfiles: ''
     ~/.zshrc: zshrc
+    ~/.zshrc.local: zshrc.local
     ~/.tmux.conf: tmux.conf
+    ~/.p10k.zsh: p10k.zsh
     ~/.oh-my-zsh/custom/plugins/zsh-completions: oh-my-zsh/custom/plugins/zsh-completions/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting/
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: oh-my-zsh/custom/plugins/zsh-autosuggestions/
